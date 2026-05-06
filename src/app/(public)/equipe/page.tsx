@@ -49,16 +49,17 @@ export default async function EquipePage() {
                 {/* Photo */}
                 <div className="shrink-0 md:w-64">
                   {p.photoUrl ? (
-                    <div className="relative aspect-[3/4] w-full overflow-hidden rounded-lg">
+                    <div className="relative aspect-[4/5] w-full overflow-hidden rounded-lg bg-cream">
                       <Image
                         src={p.photoUrl}
                         alt={p.photoAlt || p.fullName}
                         fill
-                        className="object-cover object-[center_20%]"
+                        sizes="(max-width: 768px) 100vw, 256px"
+                        className="object-cover object-top"
                       />
                     </div>
                   ) : (
-                    <div className="flex aspect-[3/4] items-center justify-center rounded-lg bg-sage/10">
+                    <div className="flex aspect-[4/5] items-center justify-center rounded-lg bg-sage/10">
                       <span className="font-heading text-5xl text-sage">
                         {p.fullName.charAt(0)}
                       </span>

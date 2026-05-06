@@ -99,16 +99,17 @@ export default async function HomePage() {
                 <Link key={p.id} href="/equipe">
                   <Card className="h-full overflow-hidden transition-shadow hover:shadow-lg">
                     {p.photoUrl ? (
-                      <div className="relative h-48 w-full bg-muted">
+                      <div className="relative aspect-[4/5] w-full overflow-hidden bg-cream">
                         <Image
                           src={p.photoUrl}
                           alt={p.photoAlt || p.fullName}
                           fill
-                          className="object-cover object-[center_20%]"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                          className="object-cover object-top"
                         />
                       </div>
                     ) : (
-                      <div className="flex h-48 items-center justify-center bg-sage/10">
+                      <div className="flex aspect-[4/5] items-center justify-center bg-sage/10">
                         <span className="font-heading text-3xl text-sage">
                           {p.fullName.charAt(0)}
                         </span>
