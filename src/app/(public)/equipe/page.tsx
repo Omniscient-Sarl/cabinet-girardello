@@ -54,7 +54,7 @@ export default async function EquipePage() {
                         src={p.photoUrl}
                         alt={p.photoAlt || p.fullName}
                         fill
-                        className="object-cover"
+                        className="object-cover object-top"
                       />
                     </div>
                   ) : (

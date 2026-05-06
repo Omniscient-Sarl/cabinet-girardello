@@ -104,7 +104,7 @@ export default async function HomePage() {
                           src={p.photoUrl}
                           alt={p.photoAlt || p.fullName}
                           fill
-                          className="object-cover"
+                          className="object-cover object-top"
                         />
                       </div>
                     ) : (
@@ -211,7 +211,7 @@ export default async function HomePage() {
               render={<Link href={cta?.cta_url || "/contact"} />}
               size="lg"
               variant="outline"
-              className="mt-6 border-white text-white hover:bg-white hover:text-sage-dark"
+              className="mt-6 border-white bg-transparent text-white hover:bg-white hover:text-sage-dark"
             >
               {cta?.cta_label || "Prendre rendez-vous"}
             </Button>
