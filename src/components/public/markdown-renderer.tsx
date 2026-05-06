@@ -43,6 +43,11 @@ export function MarkdownRenderer({ content, className }: MarkdownRendererProps) 
               {children}
             </h3>
           ),
+          table: ({ children }) => (
+            <div className="overflow-x-auto">
+              <table>{children}</table>
+            </div>
+          ),
         }}
       >
         {content}

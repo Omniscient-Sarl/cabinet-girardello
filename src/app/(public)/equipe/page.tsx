@@ -22,7 +22,7 @@ export default async function EquipePage() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-cream">
+      <section className="flex min-h-[calc(100dvh-4rem)] items-center bg-cream">
         <div className="mx-auto max-w-6xl px-4 py-16 text-center md:py-20">
           {hero?.eyebrow && (
             <p className="text-sm font-medium uppercase tracking-wider text-sage">
@@ -54,7 +54,7 @@ export default async function EquipePage() {
                         src={p.photoUrl}
                         alt={p.photoAlt || p.fullName}
                         fill
-                        className="object-cover object-top"
+                        className="object-cover object-[center_20%]"
                       />
                     </div>
                   ) : (

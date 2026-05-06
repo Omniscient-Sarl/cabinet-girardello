@@ -16,18 +16,18 @@ export default async function BlogIndexPage() {
 
   return (
     <div>
-      {/* Breadcrumb */}
-      <div className="mx-auto max-w-6xl px-4 pt-6">
-        <nav className="text-sm text-muted-foreground">
-          <Link href="/" className="hover:text-sage-dark">
-            Accueil
-          </Link>
-          <span className="mx-2">/</span>
-          <span>Blog</span>
-        </nav>
-      </div>
+      {/* Hero */}
+      <section className="flex min-h-[calc(100dvh-4rem)] flex-col bg-white">
+        <div className="mx-auto max-w-6xl px-4 pt-6">
+          <nav className="text-sm text-muted-foreground">
+            <Link href="/" className="hover:text-sage-dark">
+              Accueil
+            </Link>
+            <span className="mx-2">/</span>
+            <span>Blog</span>
+          </nav>
+        </div>
 
-      <section className="bg-white">
         <div className="mx-auto max-w-6xl px-4 py-12 md:py-16">
           <h1 className="font-heading text-4xl font-bold text-foreground">Blog</h1>
           <p className="mt-2 text-muted-foreground">

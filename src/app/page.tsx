@@ -40,7 +40,7 @@ export default async function HomePage() {
       <Header />
       <main className="flex-1">
         {/* Hero */}
-        <section className="bg-cream">
+        <section className="flex min-h-[calc(100dvh-4rem)] items-center bg-cream">
           <div className="mx-auto max-w-6xl px-4 py-20 text-center md:py-28">
             <h1 className="font-heading text-4xl font-bold text-foreground md:text-5xl lg:text-6xl">
               {hero?.h1 || "Cabinet Girardello"}
@@ -104,7 +104,7 @@ export default async function HomePage() {
                           src={p.photoUrl}
                           alt={p.photoAlt || p.fullName}
                           fill
-                          className="object-cover object-top"
+                          className="object-cover object-[center_20%]"
                         />
                       </div>
                     ) : (
