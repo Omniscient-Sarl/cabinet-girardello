@@ -106,7 +106,7 @@ export default async function EquipePage() {
                     <a
                       href={p.externalSiteUrl}
                       target="_blank"
-                      rel="noopener noreferrer"
+                      rel="external noopener"
                       className="mt-4 inline-flex items-center gap-2 rounded-md bg-sage/10 px-4 py-2 text-sm font-medium text-sage-dark hover:bg-sage/20"
                     >
                       <ExternalLink className="h-4 w-4" />

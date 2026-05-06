@@ -66,7 +66,7 @@ export function Footer() {
                 <a
                   href="https://physio-vertige.ch"
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="external noopener"
                   className="text-muted-foreground hover:text-sage-dark"
                 >
                   Physio-Vertige.ch — Reeducation vestibulaire
