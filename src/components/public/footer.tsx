@@ -78,6 +78,17 @@ export function Footer() {
 
         <div className="mt-8 border-t border-border pt-6 text-center text-xs text-muted-foreground">
           &copy; {new Date().getFullYear()} Cabinet Girardello. Tous droits reserves.
+          <p className="mt-2 text-muted-foreground/70">
+            Développé par{" "}
+            <a
+              href="https://omniscient.swiss"
+              target="_blank"
+              rel="external noopener"
+              className="underline transition-colors hover:text-foreground"
+            >
+              Omniscient Sàrl
+            </a>
+          </p>
         </div>
       </div>
     </footer>
