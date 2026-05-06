@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import Link from "next/link";
 import { getAllPages } from "@/db/queries";
 import { Card, CardContent } from "@/components/ui/card";

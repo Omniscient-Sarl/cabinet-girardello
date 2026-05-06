@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import Link from "next/link";
 import { getAllPractitioners } from "@/db/queries";
 import { Card, CardContent } from "@/components/ui/card";
