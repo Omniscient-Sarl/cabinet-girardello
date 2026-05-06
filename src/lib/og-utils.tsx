@@ -15,8 +15,8 @@ export async function loadFonts() {
     fs.readFile(path.join(fontsDir, "Inter-Regular.ttf")),
   ]);
   fontsCache = {
-    playfair: playfair.buffer as ArrayBuffer,
-    inter: inter.buffer as ArrayBuffer,
+    playfair: new Uint8Array(playfair).buffer,
+    inter: new Uint8Array(inter).buffer,
   };
   return fontsCache;
 }
