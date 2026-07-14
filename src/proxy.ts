@@ -5,11 +5,18 @@ const isAdminRoute = createRouteMatcher(["/admin(.*)", "/api/admin(.*)"]);
 
 export default clerkMiddleware(async (auth, req) => {
   if (isAdminRoute(req)) {
-    const { userId } = await auth();
+    const { userId, sessionClaims } = await auth();
+
     if (!userId) {
       const signInUrl = new URL("/sign-in", req.url);
       signInUrl.searchParams.set("redirect_url", req.url);
       return NextResponse.redirect(signInUrl);
+    }
+
+    const role = (sessionClaims?.metadata as { role?: string } | undefined)
+      ?.role;
+    if (role !== "admin") {
+      return NextResponse.redirect(new URL("/", req.url));
     }
   }
 });

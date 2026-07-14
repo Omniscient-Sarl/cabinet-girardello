@@ -2,11 +2,15 @@ import { NextResponse } from "next/server";
 import { db } from "@/db";
 import * as schema from "@/db/schema";
 import { eq } from "drizzle-orm";
+import { requireAdmin } from "@/lib/auth";
 
 export async function PUT(
   req: Request,
   { params }: { params: Promise<{ id: string; sectionId: string }> }
 ) {
+  const { error } = await requireAdmin();
+  if (error) return error;
+
   const { sectionId } = await params;
   const body = await req.json();
   const [row] = await db
@@ -21,6 +25,9 @@ export async function DELETE(
   _req: Request,
   { params }: { params: Promise<{ id: string; sectionId: string }> }
 ) {
+  const { error } = await requireAdmin();
+  if (error) return error;
+
   const { sectionId } = await params;
   await db
     .delete(schema.pageSections)
